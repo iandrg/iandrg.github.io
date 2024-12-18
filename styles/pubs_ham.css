@@ -69,6 +69,15 @@ h1, h2, h3 {
     margin:0 auto;
 }
 
+/* Contenedor principal */
+#project-content {
+    margin-right: 20px;
+    transition: margin-right 0.5s;
+    max-width: 1000px;
+    padding: 40px;
+    margin:0 auto;
+}
+
 /* Estilos para publicaciones */
 .publications-container {
     max-width: 900px;
@@ -127,15 +136,7 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-/* Contenedor principal */
-#project-content {
-    margin-right: 20px;
-    transition: margin-right 0.5s;
-    max-width: 1000px;
-    margin:0 auto;
 
-
-}
 
 /* Estilo responsive para publicaciones */
 @media (max-width: 768px) {
