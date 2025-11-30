@@ -1,166 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AISTRONOR — AI consultancy delivering intelligent automation, predictive analytics, and data-driven solutions for the future of business." />
-  <meta name="author" content="AISTRONOR" />
-  <title>AISTRONOR | AI Consultancy</title>
+  <meta name="description" content="AISTRONOR — AI consultancy focused on advanced machine learning, risk modeling, and quantitative intelligence for financial institutions." />
+  <title>AISTRONOR | AI for Financial Services</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
+
+  <!-- Custom Tailwind palette -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cobalt: '#0047FF',
+            purpledeep: '#6C2BD9',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons -->
   <script src="https://kit.fontawesome.com/a2e0b6b9a7.js" crossorigin="anonymous"></script>
 
-  <!-- Custom Styles -->
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     .hero-bg {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1500&q=80') center/cover;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80') center/cover;
     }
   </style>
 </head>
 
-<body class="font-sans text-gray-800">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
 
-  <!-- NAVBAR -->
-  <nav class="bg-white fixed w-full z-50 shadow">
-    <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <a href="#home" class="text-2xl font-bold text-blue-700">AISTRONOR</a>
-      <ul class="hidden md:flex space-x-8">
-        <li><a href="#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="#services" class="hover:text-blue-600">Services</a></li>
-        <li><a href="#case-studies" class="hover:text-blue-600">Case Studies</a></li>
-        <li><a href="#team" class="hover:text-blue-600">Team</a></li>
-        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-      <a href="#contact" class="hidden md:block bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800">Get in Touch</a>
-    </div>
-  </nav>
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#home" class="text-2xl font-bold text-cobalt dark:text-purpledeep">
+      AISTRONOR
+    </a>
 
-  <!-- HERO -->
-  <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
-    <div>
-      <h1 class="text-5xl font-bold mb-4">Intelligence that Transforms</h1>
-      <p class="text-xl mb-8">Empowering businesses with advanced AI, data analytics, and automation solutions.</p>
-      <a href="#services" class="bg-blue-700 hover:bg-blue-800 px-6 py-3 rounded-lg font-semibold">Discover Our Work</a>
-    </div>
-  </section>
+    <ul class="hidden md:flex space-x-8">
+      <li><a href="#about" class="hover:text-cobalt dark:hover:text-purpledeep">About</a></li>
+      <li><a href="#services" class="hover:text-cobalt dark:hover:text-purpledeep">Services</a></li>
+      <li><a href="#cases" class="hover:text-cobalt dark:hover:text-purpledeep">Case Studies</a></li>
+      <li><a href="#team" class="hover:text-cobalt dark:hover:text-purpledeep">Team</a></li>
+      <li><a href="#contact" class="hover:text-cobalt dark:hover:text-purpledeep">Contact</a></li>
+    </ul>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold mb-6 text-blue-700">About Us</h2>
-      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
-        AISTRONOR is an AI consultancy specializing in developing and integrating intelligent systems for data-driven decision-making, automation, and optimization. 
-        Our multidisciplinary team combines expertise in machine learning, natural language processing, and business analytics to deliver scalable, secure, and ethical AI solutions.
-      </p>
-    </div>
-  </section>
+    <!-- Dark Mode Toggle -->
+    <button id="darkToggle" class="ml-6 text-xl p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
+      <i class="fa-solid fa-moon text-purpledeep hidden dark:inline"></i>
+      <i class="fa-solid fa-sun text-cobalt dark:hidden"></i>
+    </button>
+  </div>
+</nav>
 
-  <!-- SERVICES -->
-  <section id="services" class="py-20">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold mb-12 text-blue-700">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <i class="fa-solid fa-robot text-4xl text-blue-700 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">AI Strategy & Roadmaps</h3>
-          <p>We design AI strategies that align with your business goals, ensuring measurable value and smooth implementation.</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <i class="fa-solid fa-chart-line text-4xl text-blue-700 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Predictive Analytics</h3>
-          <p>Unlock insights from your data using machine learning models that forecast trends, detect anomalies, and drive growth.</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <i class="fa-solid fa-gears text-4xl text-blue-700 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Intelligent Automation</h3>
-          <p>Streamline operations with custom-built AI agents, chatbots, and workflow automation powered by large language models.</p>
-        </div>
+<!-- HERO -->
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+  <div>
+    <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">AI Excellence for Financial Institutions</h1>
+    <p class="text-xl mb-8 drop-shadow-lg">Risk modeling • Quant engineering • Automated compliance • Portfolio intelligence</p>
+    <a href="#services" class="bg-cobalt dark:bg-purpledeep px-6 py-3 rounded-lg font-semibold hover:opacity-90">
+      Explore Solutions
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-cobalt dark:text-purpledeep">About AISTRONOR</h2>
+    <p class="text-lg leading-relaxed">
+      AISTRONOR specializes in advanced AI and quantitative intelligence for the financial sector. 
+      We develop high-precision models for credit risk, market forecasting, algorithmic trading, anti-fraud detection, 
+      and regulatory compliance automation. Our focus is reliability, explainability, and measurable financial impact.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-cobalt dark:text-purpledeep">Specialized Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-signal text-4xl text-cobalt dark:text-purpledeep mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Market Forecasting Systems</h3>
+        <p>
+          Deep learning architectures for price signals, volatility surfaces, liquidity forecasting, and alpha discovery.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-shield-halved text-4xl text-cobalt dark:text-purpledeep mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Credit & Risk Modeling</h3>
+        <p>
+          ML-driven scoring, PD/LGD/EAD estimation, exposure simulation (Monte Carlo), stress-testing automation (IFRS9/Basel).
+        </p>
+      </div>
+
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-scale-balanced text-4xl text-cobalt dark:text-purpledeep mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">RegTech & Compliance Automation</h3>
+        <p>
+          NLP systems for KYC/AML checks, regulatory reporting, anomaly detection, and behavior monitoring at scale.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CASE STUDIES -->
-  <section id="case-studies" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold mb-12 text-blue-700">Case Studies</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60" alt="Case Study 1" class="rounded-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Financial Forecasting Engine</h3>
-          <p>We developed a neural forecasting model that improved portfolio predictions by 27% for a major asset management firm.</p>
-        </div>
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
-          <img src="https://images.unsplash.com/photo-1526378722438-5c1d3f17c6b0?auto=format&fit=crop&w=800&q=60" alt="Case Study 2" class="rounded-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Manufacturing Optimization</h3>
-          <p>AI-driven predictive maintenance reduced unplanned downtime by 42% across a global manufacturing network.</p>
-        </div>
-        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
-          <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=800&q=60" alt="Case Study 3" class="rounded-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Customer Insights NLP</h3>
-          <p>Our NLP system automated customer sentiment analysis across multiple languages, saving over 1,000 analyst hours annually.</p>
-        </div>
+<!-- CASE STUDIES -->
+<section id="cases" class="py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-cobalt dark:text-purpledeep">Financial Case Studies</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1581090464777-7e4c9d46a3dd?auto=format&fit=crop&w=900&q=60"
+             class="rounded-lg mb-4" alt="Portfolio Optimization" />
+        <h3 class="text-xl font-semibold mb-2">Automated Portfolio Optimization</h3>
+        <p>
+          Reinforcement-learning allocation engine improved Sharpe ratio by **18%** and reduced drawdowns under high volatility regimes.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- TEAM -->
-  <section id="team" class="py-20">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold mb-12 text-blue-700">Meet the Team</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-32 h-32 mx-auto rounded-full mb-4" alt="CEO">
-          <h3 class="text-xl font-semibold mb-1">Dr. Adrian Torres</h3>
-          <p class="text-blue-700 mb-2">Founder & CEO</p>
-          <p>PhD in Machine Learning. 15+ years of experience in AI innovation and strategic consulting.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-32 h-32 mx-auto rounded-full mb-4" alt="CTO">
-          <h3 class="text-xl font-semibold mb-1">Laura Schmidt</h3>
-          <p class="text-blue-700 mb-2">Chief Technology Officer</p>
-          <p>Expert in cloud AI architectures, scalable MLOps pipelines, and ethical AI frameworks.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <img src="https://randomuser.me/api/portraits/men/71.jpg" class="w-32 h-32 mx-auto rounded-full mb-4" alt="Lead Data Scientist">
-          <h3 class="text-xl font-semibold mb-1">Carlos Mendes</h3>
-          <p class="text-blue-700 mb-2">Lead Data Scientist</p>
-          <p>Specialized in natural language processing, generative models, and reinforcement learning systems.</p>
-        </div>
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=60"
+             class="rounded-lg mb-4" alt="Fraud Detection" />
+        <h3 class="text-xl font-semibold mb-2">Real-Time Fraud Detection</h3>
+        <p>
+          Graph-based anomaly detection reduced false positives by **43%** for a digital banking platform handling 12M+ transactions/day.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold mb-8 text-blue-700">Get in Touch</h2>
-      <p class="mb-12 text-lg">Let's discuss how AI can transform your business. Fill the form below and our consultants will reach out shortly.</p>
-      <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow">
-        <input type="text" placeholder="Your Name" class="w-full mb-4 px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
-        <input type="email" placeholder="Your Email" class="w-full mb-4 px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
-        <textarea placeholder="Your Message" rows="5" class="w-full mb-6 px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"></textarea>
-        <button class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg w-full font-semibold">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-blue-900 text-white py-8">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <p class="mb-2">&copy; 2025 AISTRONOR. All rights reserved.</p>
-      <div class="space-x-4">
-        <a href="#" class="hover:text-blue-300"><i class="fab fa-linkedin text-xl"></i></a>
-        <a href="#" class="hover:text-blue-300"><i class="fab fa-twitter text-xl"></i></a>
-        <a href="#" class="hover:text-blue-300"><i class="fab fa-github text-xl"></i></a>
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=60"
+             class="rounded-lg mb-4" alt="Risk Modeling" />
+        <h3 class="text-xl font-semibold mb-2">Stress-Testing Automation</h3>
+        <p>
+          End-to-end scenario generation system enabling **real-time IFRS9 updates**, reducing reporting time by 91%.
+        </p>
       </div>
+
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-cobalt dark:text-purpledeep">Leadership Team</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://randomuser.me/api/portraits/men/70.jpg"
+             class="w-32 h-32 mx-auto rounded-full mb-4" alt="CEO">
+        <h3 class="text-xl font-semibold mb-1">Dr. Daniel Rocha</h3>
+        <p class="text-cobalt dark:text-purpledeep mb-2">Founder & Chief AI Architect</p>
+        <p>Expert in quantitative ML, systemic risk, and financial modeling theory.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://randomuser.me/api/portraits/women/12.jpg"
+             class="w-32 h-32 mx-auto rounded-full mb-4" alt="CTO">
+        <h3 class="text-xl font-semibold mb-1">Marina Ortega</h3>
+        <p class="text-cobalt dark:text-purpledeep mb-2">CTO</p>
+        <p>Specialist in MLOps, large-scale model deployment, and cloud security.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://randomuser.me/api/portraits/men/48.jpg"
+             class="w-32 h-32 mx-auto rounded-full mb-4" alt="Financial DS">
+        <h3 class="text-xl font-semibold mb-1">Hiroshi Tanaka</h3>
+        <p class="text-cobalt dark:text-purpledeep mb-2">Lead Quant Data Scientist</p>
+        <p>Specialized in derivative pricing ML, portfolio theory, and stochastic modeling.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-cobalt dark:text-purpledeep">Contact Us</h2>
+    <p class="mb-12 text-lg">Request a consultation and explore how AI can reshape your financial operations.</p>
+
+    <form class="max-w-xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-xl shadow">
+      <input type="text" placeholder="Your Name"
+             class="w-full mb-4 px-4 py-2 border rounded-lg focus:ring-cobalt dark:focus:ring-purpledeep dark:bg-gray-800" required>
+
+      <input type="email" placeholder="Your Email"
+             class="w-full mb-4 px-4 py-2 border rounded-lg focus:ring-cobalt dark:focus:ring-purpledeep dark:bg-gray-800" required>
+
+      <textarea rows="5" placeholder="Your Message"
+                class="w-full mb-6 px-4 py-2 border rounded-lg focus:ring-cobalt dark:focus:ring-purpledeep dark:bg-gray-800" required></textarea>
+
+      <button class="bg-cobalt dark:bg-purpledeep text-white px-6 py-3 rounded-lg w-full font-semibold hover:opacity-90">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-cobalt dark:bg-purpledeep text-white py-8">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <p>&copy; 2025 AISTRONOR — AI for Financial Services</p>
+  </div>
+</footer>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+  const htmlEl = document.documentElement;
+  const toggleBtn = document.getElementById("darkToggle");
+
+  if (localStorage.getItem("theme") === "dark") {
+    htmlEl.classList.add("dark");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    htmlEl.classList.toggle("dark");
+    localStorage.setItem("theme",
+      htmlEl.classList.contains("dark") ? "dark" : "light"
+    );
+  });
+</script>
 
 </body>
 </html>
