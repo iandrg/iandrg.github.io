@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AISTRONOR | Investment Intelligence Systems</title>
+  <title>AISTRONOR | Equity Research Intelligence & AI Agents</title>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Tailwind Config -->
@@ -15,11 +15,13 @@
       theme: {
         extend: {
           colors: {
-            cobalt: "#0047FF",
-            purpledeep: "#6C2BD9",
+            cobalt: "#306BFF",
+            neonpurple: "#A259FF",
+            ink: "#0B0F19",
+            carbon: "#131823",
           },
           fontFamily: {
-            display: ["IBM Plex Mono", "monospace"],
+            display: ["JetBrains Mono", "monospace"],
             body: ["Inter", "sans-serif"],
           }
         }
@@ -28,86 +30,119 @@
   </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     .gradient-text {
-      background: linear-gradient(90deg, #0047FF 0%, #6C2BD9 100%);
+      background: linear-gradient(90deg, #306BFF 0%, #A259FF 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   </style>
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-body transition-colors">
+<body class="bg-ink text-gray-200 font-body">
 
-<!-- NAVBAR (Ragas-style floating pill) -->
-<nav class="fixed w-full top-0 z-50 flex justify-center mt-4">
-  <div class="backdrop-blur-lg px-6 py-3 rounded-full border border-gray-300/40 dark:border-gray-700/40 shadow-sm
-              flex items-center space-x-8 bg-white/70 dark:bg-gray-900/40">
-    <a href="#home" class="font-display text-sm hover:text-cobalt dark:hover:text-purpledeep">Home</a>
-    <a href="#services" class="font-display text-sm hover:text-cobalt dark:hover:text-purpledeep">Services</a>
-    <a href="#cases" class="font-display text-sm hover:text-cobalt dark:hover:text-purpledeep">Case Studies</a>
-    <a href="#contact" class="font-display text-sm hover:text-cobalt dark:hover:text-purpledeep">Contact</a>
+<!-- NAVBAR -->
+<nav class="fixed w-full top-0 z-50 border-b border-gray-800 bg-carbon/70 backdrop-blur-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="font-display text-xl gradient-text font-bold">AISTRONOR</div>
 
-    <!-- Dark mode toggle -->
-    <button id="darkToggle" class="text-xl ml-4 hover:opacity-75">
-      <span id="sun" class="hidden">☀️</span>
-      <span id="moon">🌙</span>
+    <ul class="hidden md:flex space-x-10 text-sm">
+      <li><a href="#services" class="hover:text-cobalt">Services</a></li>
+      <li><a href="#agents" class="hover:text-cobalt">AI Agents</a></li>
+      <li><a href="#cases" class="hover:text-cobalt">Case Studies</a></li>
+      <li><a href="#contact" class="hover:text-cobalt">Contact</a></li>
+    </ul>
+
+    <button id="darkToggle" class="md:ml-6 p-2 rounded hover:bg-gray-700/60">
+      🌙
     </button>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="pt-40 pb-32 text-center max-w-4xl mx-auto px-6">
-  <h1 class="font-display text-5xl sm:text-6xl font-bold mb-6 gradient-text leading-tight">
-    Modern AI for<br>Investment Intelligence
+<section class="pt-40 pb-32 max-w-5xl mx-auto px-6 text-center">
+  <h1 class="font-display text-5xl font-bold mb-6">
+    <span class="gradient-text">AI Systems for Equity Research</span>
   </h1>
-
-  <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-    Advanced systems for market tracking, portfolio optimization, automated document summarization,
-    and investment research intelligence — engineered with precision and reliability.
+  <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+    Advanced AI agents, market intelligence engines, document automation, RAG pipelines,
+    and graph-based reasoning tools for analysts, PMs, and investment research teams.
   </p>
 
   <div class="mt-10">
     <a href="#services"
-       class="px-6 py-3 rounded-full text-white bg-gradient-to-r from-cobalt to-purpledeep
-              font-medium hover:opacity-90 transition">
+       class="px-6 py-3 rounded-lg bg-gradient-to-r from-cobalt to-neonpurple font-semibold hover:opacity-90">
       Explore Solutions
     </a>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-28 max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl font-display font-semibold mb-12 gradient-text">Investment Services</h2>
+<section id="services" class="py-28 max-w-7xl mx-auto px-6">
+  <h2 class="font-display text-3xl mb-16 gradient-text font-bold">Core Services</h2>
 
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <div class="p-8 rounded-xl border border-gray-300 dark:border-gray-700 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-3">Market Trackers & Signals</h3>
-      <p class="text-gray-700 dark:text-gray-300">
-        Multimodal trackers combining fundamentals, sentiment, alternative data, volatility features
-        and microstructure patterns.  
-        Custom smart-signal pipelines with real-time feature feeds.
+  <div class="grid md:grid-cols-3 gap-10">
+    
+    <!-- Market Trackers -->
+    <div class="bg-carbon border border-gray-800 p-8 rounded-xl hover:border-cobalt transition">
+      <h3 class="font-display text-xl mb-3">Market Intelligence Trackers</h3>
+      <p class="text-gray-400">
+        Multi-asset monitoring engines combining fundamentals, macro signals, alt-data,
+        sentiment layers, and volatility structures with streaming ingestion pipelines.
       </p>
     </div>
 
-    <div class="p-8 rounded-xl border border-gray-300 dark:border-gray-700 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-3">Portfolio Optimization</h3>
-      <p class="text-gray-700 dark:text-gray-300">
-        RL-based allocation engines, risk-budgeting frameworks, factor models, 
-        and scenario-aware rebalancing.  
-        Supports long-only, long-short, multi-asset, and thematic portfolios.
+    <!-- Portfolio Opt -->
+    <div class="bg-carbon border border-gray-800 p-8 rounded-xl hover:border-neonpurple transition">
+      <h3 class="font-display text-xl mb-3">Portfolio Optimization Systems</h3>
+      <p class="text-gray-400">
+        Reinforcement learning allocators, risk-budgeting engines, factor models,
+        scenario-aware rebalancing and multi-objective optimization frameworks.
       </p>
     </div>
 
-    <div class="p-8 rounded-xl border border-gray-300 dark:border-gray-700 hover:shadow-lg transition">
+    <!-- Document Automation -->
+    <div class="bg-carbon border border-gray-800 p-8 rounded-xl hover:border-cobalt transition">
       <h3 class="font-display text-xl mb-3">Automated Document Summaries</h3>
-      <p class="text-gray-700 dark:text-gray-300">
-        Real-time summarizers for earnings calls, 10-K/10-Q filings, research notes,
-        funds’ commentary, and macroeconomic reports.  
-        Extracts key insights, risk statements, and forward-guidance signals.
+      <p class="text-gray-400">
+        Extraction & summarization engines for earnings calls, filings, research notes,
+        presentations and macro reports.  
+        Embedded KPI extraction + risk parsing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- AI AGENTS -->
+<section id="agents" class="py-28 bg-carbon/40 max-w-7xl mx-auto px-6">
+  <h2 class="font-display text-3xl mb-16 gradient-text font-bold">AI Agents for Equity Research</h2>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+    <div class="p-8 bg-carbon border border-gray-800 rounded-xl hover:border-cobalt transition">
+      <h3 class="font-display text-xl mb-2">Agent Design</h3>
+      <p class="text-gray-400">
+        Architecture of autonomous or semi-autonomous research agents capable of retrieving,
+        analysing, summarizing and interpreting financial data across multiple modalities.
+      </p>
+    </div>
+
+    <div class="p-8 bg-carbon border border-gray-800 rounded-xl hover:border-neonpurple transition">
+      <h3 class="font-display text-xl mb-2">RAG Pipelines for Research</h3>
+      <p class="text-gray-400">
+        Retrieval-augmented generation tuned for financial text.  
+        Sources: filings, transcripts, PDFs, news, equity datasets, proprietary content.  
+        Includes caching, chunking, embeddings, ranking & evaluation.
+      </p>
+    </div>
+
+    <div class="p-8 bg-carbon border border-gray-800 rounded-xl hover:border-cobalt transition">
+      <h3 class="font-display text-xl mb-2">Graph-Enhanced Reasoning</h3>
+      <p class="text-gray-400">
+        Knowledge graphs for companies, sectors, supply chains, KPIs, risks and relationships.  
+        Enables path-based reasoning, sentiment propagation, and multi-step research queries.
       </p>
     </div>
 
@@ -115,47 +150,27 @@
 </section>
 
 <!-- CASE STUDIES -->
-<section id="cases" class="py-28 max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl font-display font-semibold mb-12 gradient-text">Case Studies</h2>
+<section id="cases" class="py-28 max-w-7xl mx-auto px-6">
+  <h2 class="font-display text-3xl mb-16 gradient-text font-bold">Case Studies</h2>
 
   <div class="grid md:grid-cols-2 gap-10">
 
-    <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-2">Cross-Asset Market Tracker</h3>
-      <p class="text-gray-700 dark:text-gray-300 mb-3">
-        Built a cross-asset feature engine combining equities, FX, credit spreads,
-        commodities and derivatives.  
-        Provided real-time rankings of market regimes and factor rotations.
+    <div class="border border-gray-800 rounded-xl p-8 bg-carbon hover:border-cobalt transition">
+      <h3 class="font-display text-xl mb-2">Equity Research RAG Platform</h3>
+      <p class="text-gray-400 mb-2">
+        Built a full research assistant combining RAG + graph reasoning for real-time extraction
+        of financial KPIs, management commentary, risk statements and forward guidance.
       </p>
-      <p class="text-sm opacity-70">↑ Prediction accuracy +12% • 24/7 signal generation</p>
+      <p class="text-xs text-gray-500">↓ Research time -70% • ↑ Insight coverage +26%</p>
     </div>
 
-    <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-2">Portfolio Optimizer with Stress Awareness</h3>
-      <p class="text-gray-700 dark:text-gray-300 mb-3">
-        Developed a risk-adjusted allocation engine integrating macro shocks,
-        vol clusters and liquidity changes.  
-        Supports daily, weekly, and intraday rebalancing.
+    <div class="border border-gray-800 rounded-xl p-8 bg-carbon hover:border-neonpurple transition">
+      <h3 class="font-display text-xl mb-2">Active Portfolio Allocation Engine</h3>
+      <p class="text-gray-400 mb-2">
+        RL-driven allocator optimizing risk-adjusted returns across multi-factor signals,
+        liquidity windows and macro regimes.
       </p>
-      <p class="text-sm opacity-70">↑ Sharpe ratio +19% • ↓ Drawdowns -14%</p>
-    </div>
-
-    <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-2">Automated Earnings-Call Summaries</h3>
-      <p class="text-gray-700 dark:text-gray-300 mb-3">
-        Built a domain-specific LLM pipeline that extracts sentiment, guidance,
-        KPI trends, and risk statements from calls & transcripts automatically.
-      </p>
-      <p class="text-sm opacity-70">↓ Analyst workload -70% • Live API integration</p>
-    </div>
-
-    <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-2">Regulatory Filings Intelligence</h3>
-      <p class="text-gray-700 dark:text-gray-300 mb-3">
-        Automated summarization & tagging for 10-K/10-Q filings with granular risk scoring,
-        financial-ratio extraction and accounting-policy detection.
-      </p>
-      <p class="text-sm opacity-70">↓ Processing time -92% • 100% auditable logs</p>
+      <p class="text-xs text-gray-500">↑ Sharpe +19% • ↓ Drawdowns -14%</p>
     </div>
 
   </div>
@@ -163,47 +178,35 @@
 
 <!-- CONTACT -->
 <section id="contact" class="py-28 max-w-4xl mx-auto px-6 text-center">
-  <h2 class="text-3xl font-display font-semibold mb-10 gradient-text">Contact Us</h2>
+  <h2 class="font-display text-3xl mb-10 gradient-text font-bold">Get in Touch</h2>
 
   <form class="max-w-xl mx-auto space-y-4">
     <input type="text" placeholder="Your Name"
-           class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
-    <input type="email" placeholder="Email"
-           class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
-    <textarea rows="5" placeholder="Message"
-              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"></textarea>
+           class="w-full px-4 py-3 rounded-lg bg-carbon border border-gray-800 text-gray-200">
 
-    <button class="w-full py-3 rounded-xl text-white bg-gradient-to-r from-cobalt to-purpledeep hover:opacity-90">
+    <input type="email" placeholder="Email"
+           class="w-full px-4 py-3 rounded-lg bg-carbon border border-gray-800 text-gray-200">
+
+    <textarea rows="5" placeholder="Message"
+              class="w-full px-4 py-3 rounded-lg bg-carbon border border-gray-800 text-gray-200"></textarea>
+
+    <button class="w-full py-3 rounded-lg bg-gradient-to-r from-cobalt to-neonpurple font-semibold hover:opacity-90">
       Submit
     </button>
   </form>
 </section>
 
 <!-- FOOTER -->
-<footer class="py-10 text-center text-sm opacity-70">
-  © 2025 AISTRONOR — Investment Intelligence & Automation
+<footer class="py-10 text-center text-xs text-gray-500 border-t border-gray-800">
+  © 2025 AISTRONOR — Equity Research Intelligence & Autonomous Agents
 </footer>
 
 <!-- DARK MODE SCRIPT -->
 <script>
   const html = document.documentElement;
   const btn = document.getElementById("darkToggle");
-  const sun = document.getElementById("sun");
-  const moon = document.getElementById("moon");
 
-  if (localStorage.theme === "dark") {
-    html.classList.add("dark");
-    sun.classList.remove("hidden");
-    moon.classList.add("hidden");
-  }
-
-  btn.onclick = () => {
-    html.classList.toggle("dark");
-    const isDark = html.classList.contains("dark");
-    localStorage.theme = isDark ? "dark" : "light";
-    sun.classList.toggle("hidden", !isDark);
-    moon.classList.toggle("hidden", isDark);
-  };
+  btn.onclick = () => html.classList.toggle("dark");
 </script>
 
 </body>
