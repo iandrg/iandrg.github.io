@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AISTRONOR | AI for Financial Services</title>
+  <title>AISTRONOR | Investment Intelligence Systems</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Config: cobalt + purpledeep -->
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -41,7 +41,7 @@
 
 <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-body transition-colors">
 
-<!-- NAVBAR (ragas-like pill) -->
+<!-- NAVBAR (Ragas-style floating pill) -->
 <nav class="fixed w-full top-0 z-50 flex justify-center mt-4">
   <div class="backdrop-blur-lg px-6 py-3 rounded-full border border-gray-300/40 dark:border-gray-700/40 shadow-sm
               flex items-center space-x-8 bg-white/70 dark:bg-gray-900/40">
@@ -50,7 +50,7 @@
     <a href="#cases" class="font-display text-sm hover:text-cobalt dark:hover:text-purpledeep">Case Studies</a>
     <a href="#contact" class="font-display text-sm hover:text-cobalt dark:hover:text-purpledeep">Contact</a>
 
-    <!-- Toggle -->
+    <!-- Dark mode toggle -->
     <button id="darkToggle" class="text-xl ml-4 hover:opacity-75">
       <span id="sun" class="hidden">☀️</span>
       <span id="moon">🌙</span>
@@ -61,75 +61,101 @@
 <!-- HERO -->
 <section id="home" class="pt-40 pb-32 text-center max-w-4xl mx-auto px-6">
   <h1 class="font-display text-5xl sm:text-6xl font-bold mb-6 gradient-text leading-tight">
-    AI Systems for<br>Modern Financial Institutions
+    Modern AI for<br>Investment Intelligence
   </h1>
+
   <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-    High-precision models for risk management, compliance automation, market forecasting,
-    and quantitative decision systems — engineered with reliability and technical rigor.
+    Advanced systems for market tracking, portfolio optimization, automated document summarization,
+    and investment research intelligence — engineered with precision and reliability.
   </p>
 
   <div class="mt-10">
-    <a href="#services" class="px-6 py-3 rounded-full text-white font-medium
-       bg-gradient-to-r from-cobalt to-purpledeep hover:opacity-90 transition">
+    <a href="#services"
+       class="px-6 py-3 rounded-full text-white bg-gradient-to-r from-cobalt to-purpledeep
+              font-medium hover:opacity-90 transition">
       Explore Solutions
     </a>
   </div>
 </section>
 
-<!-- SERVICES (ragas-like card grid) -->
+<!-- SERVICES -->
 <section id="services" class="py-28 max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl font-display font-semibold mb-12 gradient-text">Core Financial Services</h2>
+  <h2 class="text-3xl font-display font-semibold mb-12 gradient-text">Investment Services</h2>
 
   <div class="grid md:grid-cols-3 gap-8">
-    <!-- Card -->
+
     <div class="p-8 rounded-xl border border-gray-300 dark:border-gray-700 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-3">Market Forecasting</h3>
+      <h3 class="font-display text-xl mb-3">Market Trackers & Signals</h3>
       <p class="text-gray-700 dark:text-gray-300">
-        Neural forecasting pipelines, volatility modeling, price-signal decomposition,
-        and RL-based trading research environments.
+        Multimodal trackers combining fundamentals, sentiment, alternative data, volatility features
+        and microstructure patterns.  
+        Custom smart-signal pipelines with real-time feature feeds.
       </p>
     </div>
 
     <div class="p-8 rounded-xl border border-gray-300 dark:border-gray-700 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-3">Risk & Credit Modeling</h3>
+      <h3 class="font-display text-xl mb-3">Portfolio Optimization</h3>
       <p class="text-gray-700 dark:text-gray-300">
-        PD/LGD/EAD estimation, scenario generation, IFRS9/Basel workflows,
-        and Monte Carlo exposure simulations.
+        RL-based allocation engines, risk-budgeting frameworks, factor models, 
+        and scenario-aware rebalancing.  
+        Supports long-only, long-short, multi-asset, and thematic portfolios.
       </p>
     </div>
 
     <div class="p-8 rounded-xl border border-gray-300 dark:border-gray-700 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-3">Compliance Automation</h3>
+      <h3 class="font-display text-xl mb-3">Automated Document Summaries</h3>
       <p class="text-gray-700 dark:text-gray-300">
-        LLM-powered KYC/AML pipelines, regulatory text compliance, anomaly graph detection,
-        and real-time fraud systems.
+        Real-time summarizers for earnings calls, 10-K/10-Q filings, research notes,
+        funds’ commentary, and macroeconomic reports.  
+        Extracts key insights, risk statements, and forward-guidance signals.
       </p>
     </div>
+
   </div>
 </section>
 
-<!-- CASE STUDIES (similar spacing + minimalism as ragas.io) -->
+<!-- CASE STUDIES -->
 <section id="cases" class="py-28 max-w-6xl mx-auto px-6">
   <h2 class="text-3xl font-display font-semibold mb-12 gradient-text">Case Studies</h2>
 
   <div class="grid md:grid-cols-2 gap-10">
 
     <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-2">Automated Portfolio Optimization</h3>
+      <h3 class="font-display text-xl mb-2">Cross-Asset Market Tracker</h3>
       <p class="text-gray-700 dark:text-gray-300 mb-3">
-        Reinforcement-learning allocation engine integrating market features,
-        sentiment data, and risk signals.
+        Built a cross-asset feature engine combining equities, FX, credit spreads,
+        commodities and derivatives.  
+        Provided real-time rankings of market regimes and factor rotations.
       </p>
-      <p class="text-sm opacity-70">↑ Sharpe ratio +18%  •  ↓ Drawdowns -11%</p>
+      <p class="text-sm opacity-70">↑ Prediction accuracy +12% • 24/7 signal generation</p>
     </div>
 
     <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
-      <h3 class="font-display text-xl mb-2">Bank Fraud Graph Detection</h3>
+      <h3 class="font-display text-xl mb-2">Portfolio Optimizer with Stress Awareness</h3>
       <p class="text-gray-700 dark:text-gray-300 mb-3">
-        Graph neural network architecture for layered transaction patterns,
-        uncovering high-dimensional anomalies.
+        Developed a risk-adjusted allocation engine integrating macro shocks,
+        vol clusters and liquidity changes.  
+        Supports daily, weekly, and intraday rebalancing.
       </p>
-      <p class="text-sm opacity-70">↓ False positives -43%  •  12M+ tx/day</p>
+      <p class="text-sm opacity-70">↑ Sharpe ratio +19% • ↓ Drawdowns -14%</p>
+    </div>
+
+    <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
+      <h3 class="font-display text-xl mb-2">Automated Earnings-Call Summaries</h3>
+      <p class="text-gray-700 dark:text-gray-300 mb-3">
+        Built a domain-specific LLM pipeline that extracts sentiment, guidance,
+        KPI trends, and risk statements from calls & transcripts automatically.
+      </p>
+      <p class="text-sm opacity-70">↓ Analyst workload -70% • Live API integration</p>
+    </div>
+
+    <div class="border border-gray-300 dark:border-gray-700 rounded-xl p-8 hover:shadow-lg transition">
+      <h3 class="font-display text-xl mb-2">Regulatory Filings Intelligence</h3>
+      <p class="text-gray-700 dark:text-gray-300 mb-3">
+        Automated summarization & tagging for 10-K/10-Q filings with granular risk scoring,
+        financial-ratio extraction and accounting-policy detection.
+      </p>
+      <p class="text-sm opacity-70">↓ Processing time -92% • 100% auditable logs</p>
     </div>
 
   </div>
@@ -155,7 +181,7 @@
 
 <!-- FOOTER -->
 <footer class="py-10 text-center text-sm opacity-70">
-  © 2025 AISTRONOR — AI for Financial Markets
+  © 2025 AISTRONOR — Investment Intelligence & Automation
 </footer>
 
 <!-- DARK MODE SCRIPT -->
