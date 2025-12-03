@@ -1,244 +1,315 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Ian del Rio</title>
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/pubs_ham.css">
 </head>
+
 <body>
 
-    <!-- Menú de hamburguesa a la derecha -->
+    <!-- Hamburger Menu -->
     <div class="hamburger-menu" onclick="toggleMenu()">
         &#9776;
     </div>
 
-    <!-- Menú lateral a la derecha -->
+    <!-- Sidebar Navigation -->
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
         <a href="index.html">About</a>
         <a href="cv.html">Resumé</a>
-        <a href="publications.html">Publications</a>
+        <a href="publications.html" class="active">Publications</a>
         <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
     </div>
 
-    <!-- Contenido principal -->
+    <!-- Main Content -->
     <div id="main-content">
         <div class="publications-container">
             <header>
                 <h1>Publications</h1>
+                <p>Selected peer-reviewed papers and articles.</p>
             </header>
 
-            <!-- Listado de publicaciones -->
+            <!-- Publications List -->
             <section class="publications-list">
                 <article class="publication">
-                    <h2>González et al, 2025. Tracing the relationship between the upper plate earthquake cycle and megathrust slip: The reactivation of the Atacama Fault System, northern Chile</h2>
-                    <p><strong>Scientific Reports</strong></p>
-                    <a href="" target="_blank">Submitted</a>
+                    <h2>González et al, 2025. Tracing the relationship between the upper plate earthquake cycle and
+                        megathrust slip: The reactivation of the Atacama Fault System, northern Chile</h2>
+                    <p class="meta"><strong>Scientific Reports</strong></p>
+                    <a href="" target="_blank" class="read-more">Submitted</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Souza et al, 2023. Quartz OSL sensitivity from dating data for provenance analysis of pleistocene and holocene fluvial sediments from lowland Amazonia</h2>
-                    <p><strong>Quaternary Geochronology</strong></p>
-                    <a href="https://doi.org/10.1016/j.quageo.2023.101422" target="_blank">DOI: 10.1016/j.quageo.2023.101422</a>
+                    <h2>Souza et al, 2023. Quartz OSL sensitivity from dating data for provenance analysis of
+                        pleistocene and holocene fluvial sediments from lowland Amazonia</h2>
+                    <p class="meta"><strong>Quaternary Geochronology</strong></p>
+                    <a href="https://doi.org/10.1016/j.quageo.2023.101422" target="_blank" class="read-more">DOI:
+                        10.1016/j.quageo.2023.101422</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Souza et al, 2022. Late Quaternary Drainage Rearrangement Prevents the Vegetation Development in the La Tatacoa Intermontane Basin of the Colombian Andes.</h2>
-                    <p><strong>Frontiers in Earth Sciences</strong></p>
-                    <a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.808718/full" target="_blank">DOI: 10.3389/feart.2022.808718/full</a>
+                    <h2>Souza et al, 2022. Late Quaternary Drainage Rearrangement Prevents the Vegetation Development in
+                        the La Tatacoa Intermontane Basin of the Colombian Andes.</h2>
+                    <p class="meta"><strong>Frontiers in Earth Sciences</strong></p>
+                    <a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.808718/full"
+                        target="_blank" class="read-more">DOI: 10.3389/feart.2022.808718/full</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Rodrigues et al, 2022. Extended-Range Luminescence Dating of Central and Eastern Amazonia Sandy Terrains</h2>
-                    <p><strong>Frontiers in Earth Sciences</strong></p>
-                    <a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.888443/full" target="_blank">DOI: 10.3389/feart.2022.888443/full</a>
-                </article>
-                
-                <article class="publication">
-                    <h2>Coppo et al, 2022. Coeval minimum south American and maximum Antarctic last glacial maximum dust deposition: A causal link?</h2>
-                    <p><strong>Quaternary Science Reviews</strong></p>
-                    <a href="https://doi.org/10.1016/j.quascirev.2022.107768" target="_blank">DOI: 10.1016/j.quascirev.2022.107768</a>
+                    <h2>Rodrigues et al, 2022. Extended-Range Luminescence Dating of Central and Eastern Amazonia Sandy
+                        Terrains</h2>
+                    <p class="meta"><strong>Frontiers in Earth Sciences</strong></p>
+                    <a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.888443/full"
+                        target="_blank" class="read-more">DOI: 10.3389/feart.2022.888443/full</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Mineli et al, 2021. Variation of luminescence sensitivity, characteristic dose and trap parameters of quartz from rocks and sediments</h2>
-                    <p><strong>Quaternary Science Reviews</strong></p>
-                    <a href="https://doi.org/10.1016/j.radmeas.2021.106583" target="_blank">DOI: 10.1016/j.radmeas.2021.106583</a>
+                    <h2>Coppo et al, 2022. Coeval minimum south American and maximum Antarctic last glacial maximum dust
+                        deposition: A causal link?</h2>
+                    <p class="meta"><strong>Quaternary Science Reviews</strong></p>
+                    <a href="https://doi.org/10.1016/j.quascirev.2022.107768" target="_blank" class="read-more">DOI:
+                        10.1016/j.quascirev.2022.107768</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al, 2021. Luminescence signals of quartz and feldspar as new methods for stratigraphic discrimination and provenance analysis of siliciclastic successions: The case of the Parnaíba Basin (Brazil) of West Gondwana</h2>
-                    <p><strong>Basin Research</strong></p>
-                    <a href="https://doi.org/10.1111/bre.12590" target="_blank">DOI: 10.1111/bre.12590</a>
+                    <h2>Mineli et al, 2021. Variation of luminescence sensitivity, characteristic dose and trap
+                        parameters of quartz from rocks and sediments</h2>
+                    <p class="meta"><strong>Quaternary Science Reviews</strong></p>
+                    <a href="https://doi.org/10.1016/j.radmeas.2021.106583" target="_blank" class="read-more">DOI:
+                        10.1016/j.radmeas.2021.106583</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Niyonzima et al, 2020. Radiofluorescence of quartz from rocks and sediments and its correlation with thermoluminescence and optically stimulated luminescence sensitivities</h2>
-                    <p><strong>Ancient TL</strong></p>
-                    <a href="http://ancienttl.org/ATL_38-1_2020/ATL_38-1_Niyonzima_p11-20.pdf" target="_blank">Link</a>
+                    <h2>Del Rio et al, 2021. Luminescence signals of quartz and feldspar as new methods for
+                        stratigraphic discrimination and provenance analysis of siliciclastic successions: The case of
+                        the Parnaíba Basin (Brazil) of West Gondwana</h2>
+                    <p class="meta"><strong>Basin Research</strong></p>
+                    <a href="https://doi.org/10.1111/bre.12590" target="_blank" class="read-more">DOI:
+                        10.1111/bre.12590</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al, 2019. Luminescence dating of sediments from central Atacama Desert, northern Chile</h2>
-                    <p><strong>Quaternary Geochronology</strong></p>
-                    <a href="https://doi.org/10.1016/j.quageo.2019.05.001" target="_blank">DOI: 10.1016/j.quageo.2019.05.001</a>
+                    <h2>Niyonzima et al, 2020. Radiofluorescence of quartz from rocks and sediments and its correlation
+                        with thermoluminescence and optically stimulated luminescence sensitivities</h2>
+                    <p class="meta"><strong>Ancient TL</strong></p>
+                    <a href="http://ancienttl.org/ATL_38-1_2020/ATL_38-1_Niyonzima_p11-20.pdf" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al, 2019. Athermal stability, bleaching behavior and dose response of luminescence signals from almandine and kyanite</h2>
-                    <p><strong>Ancient TL</strong></p>
-                    <a href="http://ancienttl.org/ATL_37-1_2019/ATL_37-1_del_Rio_p11-21.pdf" target="_blank">Link</a>
+                    <h2>Del Rio et al, 2019. Luminescence dating of sediments from central Atacama Desert, northern
+                        Chile</h2>
+                    <p class="meta"><strong>Quaternary Geochronology</strong></p>
+                    <a href="https://doi.org/10.1016/j.quageo.2019.05.001" target="_blank" class="read-more">DOI:
+                        10.1016/j.quageo.2019.05.001</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Torre et al, 2019. Revisiting the chronology and environmental conditions for the accretion of late Pleistocene-early Holocene Pampean loess (Argentina)</h2>
-                    <p><strong>Quaternary Science Reviews</strong></p>
-                    <a href="https://doi.org/10.1016/j.quascirev.2019.04.018" target="_blank">DOI: 10.1016/j.quascirev.2019.04.018</a>
+                    <h2>Del Rio et al, 2019. Athermal stability, bleaching behavior and dose response of luminescence
+                        signals from almandine and kyanite</h2>
+                    <p class="meta"><strong>Ancient TL</strong></p>
+                    <a href="http://ancienttl.org/ATL_37-1_2019/ATL_37-1_del_Rio_p11-21.pdf" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Gonzalez-Alfaro et al, 2018. Abrupt increase in the coastal uplift and earthquake rate since ∼40 ka at the northern Chile seismic gap in the Central Andes</h2>
-                    <p><strong>Earth and Planetary Science Letters</strong></p>
-                    <a href="https://doi.org/10.1016/j.epsl.2018.08.043" target="_blank">DOI: 10.1016/j.epsl.2018.08.043</a>
+                    <h2>Torre et al, 2019. Revisiting the chronology and environmental conditions for the accretion of
+                        late Pleistocene-early Holocene Pampean loess (Argentina)</h2>
+                    <p class="meta"><strong>Quaternary Science Reviews</strong></p>
+                    <a href="https://doi.org/10.1016/j.quascirev.2019.04.018" target="_blank" class="read-more">DOI:
+                        10.1016/j.quascirev.2019.04.018</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Aranguiz et al, 2016. The 16 September 2015 Chile Tsunami from the Post-Tsunami Survey and Numerical Modeling Perspectives</h2>
-                    <p><strong>Pure and Applied Geophysics</strong></p>
-                    <a href="http://dx.doi.org/10.1007/s00024-015-1225-4" target="_blank">DOI: 10.1007/s00024-015-1225-4</a>
+                    <h2>Gonzalez-Alfaro et al, 2018. Abrupt increase in the coastal uplift and earthquake rate since ∼40
+                        ka at the northern Chile seismic gap in the Central Andes</h2>
+                    <p class="meta"><strong>Earth and Planetary Science Letters</strong></p>
+                    <a href="https://doi.org/10.1016/j.epsl.2018.08.043" target="_blank" class="read-more">DOI:
+                        10.1016/j.epsl.2018.08.043</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Tsige et al, 2016. Modeling of Landslides in Valles Marineris, Mars, and Implications for Initiation Mechanism</h2>
-                    <p><strong>Earth, Moon and Planets</strong></p>
-                    <a href="http://dx.doi.org/10.1007/s11038-016-9488-z" target="_blank">DOI: 10.1007/s11038-016-9488-z</a>
+                    <h2>Aranguiz et al, 2016. The 16 September 2015 Chile Tsunami from the Post-Tsunami Survey and
+                        Numerical Modeling Perspectives</h2>
+                    <p class="meta"><strong>Pure and Applied Geophysics</strong></p>
+                    <a href="http://dx.doi.org/10.1007/s00024-015-1225-4" target="_blank" class="read-more">DOI:
+                        10.1007/s00024-015-1225-4</a>
+                </article>
+
+                <article class="publication">
+                    <h2>Tsige et al, 2016. Modeling of Landslides in Valles Marineris, Mars, and Implications for
+                        Initiation Mechanism</h2>
+                    <p class="meta"><strong>Earth, Moon and Planets</strong></p>
+                    <a href="http://dx.doi.org/10.1007/s11038-016-9488-z" target="_blank" class="read-more">DOI:
+                        10.1007/s11038-016-9488-z</a>
                 </article>
 
             </section>
         </div>
     </div>
 
-    <!-- Contenido principal -->
+    <!-- Presentations -->
     <div id="main-content">
         <div class="publications-container">
             <header>
                 <h1>Presentations & Conferences</h1>
             </header>
 
-            <!-- Listado de publicaciones -->
             <section class="publications-list">
                 <article class="publication">
-                    <h2>González et al., 2023. Pleistocene upper plate faulting along the Atacama Fault System, northern Chile: earthquake cycle and slip mechanism</h2>
-                    <p><strong>AGU Fall Meeting, 2023</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2023AGUFM.S32A..01G/abstract" target="_blank">Link</a>
+                    <h2>González et al., 2023. Pleistocene upper plate faulting along the Atacama Fault System, northern
+                        Chile: earthquake cycle and slip mechanism</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2023</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2023AGUFM.S32A..01G/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Pupim et al., 2022. Fluvial fans and terraces in the foothills of the Eastern Cordillera of Colombia: morphology, sediments, and luminescence ages</h2>
-                    <p><strong>10th IAG International Conference on Geomorphology, 2022</strong></p>
-                    <a href="https://meetingorganizer.copernicus.org/ICG2022/ICG2022-497.html" target="_blank">Link</a>
+                    <h2>Pupim et al., 2022. Fluvial fans and terraces in the foothills of the Eastern Cordillera of
+                        Colombia: morphology, sediments, and luminescence ages</h2>
+                    <p class="meta"><strong>10th IAG International Conference on Geomorphology, 2022</strong></p>
+                    <a href="https://meetingorganizer.copernicus.org/ICG2022/ICG2022-497.html" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Campos et al., 2021. Quartz Luminescence Sensitivity for Northeastern South American Hydroclimate Reconstruction during Termination II</h2>
-                    <p><strong>AGU Fall Meeting, 2021</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP15G1390C/abstract" target="_blank">Link</a>
+                    <h2>Campos et al., 2021. Quartz Luminescence Sensitivity for Northeastern South American
+                        Hydroclimate Reconstruction during Termination II</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2021</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP15G1390C/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Souza et al., 2021. Changes in Provenance of Amazon Fluvial Sediments During the Late Pleistocene and Holocene Indicated by Quartz OSL Sensitivity</h2>
-                    <p><strong>AGU Fall Meeting, 2021</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP15G1388S/abstract" target="_blank">Link</a>
+                    <h2>Souza et al., 2021. Changes in Provenance of Amazon Fluvial Sediments During the Late
+                        Pleistocene and Holocene Indicated by Quartz OSL Sensitivity</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2021</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP15G1388S/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al., 2021. Modelling time-temperature paths of feldspar TL signals to estimate subsidence rates</h2>
-                    <p><strong>AGU Fall Meeting, 2021</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP15G1398D/abstract" target="_blank">Link</a>
+                    <h2>Del Rio et al., 2021. Modelling time-temperature paths of feldspar TL signals to estimate
+                        subsidence rates</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2021</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP15G1398D/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Rodrigues et al., 2021. Changes in Mesozoic-Cenozoic Amazon fluvial systems revealed by quartz luminescence</h2>
-                    <p><strong>AGU Fall Meeting, 2021</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP14C..07R/abstract" target="_blank">Link</a>
+                    <h2>Rodrigues et al., 2021. Changes in Mesozoic-Cenozoic Amazon fluvial systems revealed by quartz
+                        luminescence</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2021</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2021AGUFMEP14C..07R/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al., 2021. Exploring the potential of TL signals from K-feldspar to estimate subsidence rates in the Amazon Basin</h2>
-                    <p><strong>16th International Conference on Luminescence and Electron Spin Resonance Dating, 2021</strong></p>
-                    <a href="https://www.researchgate.net/publication/354781119_Exploring_the_potential_of_TL_signals_from_K-feldspar_to_estimate_subsidence_rates_in_the_Amazon_Basin?channel=doi&linkId=614c6c84a3df59440ba540c2&showFulltext=true" target="_blank">Link</a>
+                    <h2>Del Rio et al., 2021. Exploring the potential of TL signals from K-feldspar to estimate
+                        subsidence rates in the Amazon Basin</h2>
+                    <p class="meta"><strong>16th International Conference on Luminescence and Electron Spin Resonance
+                            Dating, 2021</strong></p>
+                    <a href="https://www.researchgate.net/publication/354781119_Exploring_the_potential_of_TL_signals_from_K-feldspar_to_estimate_subsidence_rates_in_the_Amazon_Basin?channel=doi&linkId=614c6c84a3df59440ba540c2&showFulltext=true"
+                        target="_blank" class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al., 2021. Potassium feldspar as a natural dosimeter in South America: Challenges, limitations and applications</h2>
-                    <p><strong>First Latin-American Congress on Solid State Dosimetry and Radiation Measurements, 2021</strong></p>
-                    <a href="https://www.researchgate.net/publication/354653263_Potassium_feldspar_as_a_natural_dosimeter_in_South_America_Challenges_limitations_and_applications" target="_blank">Link</a>
+                    <h2>Del Rio et al., 2021. Potassium feldspar as a natural dosimeter in South America: Challenges,
+                        limitations and applications</h2>
+                    <p class="meta"><strong>First Latin-American Congress on Solid State Dosimetry and Radiation
+                            Measurements, 2021</strong></p>
+                    <a href="https://www.researchgate.net/publication/354653263_Potassium_feldspar_as_a_natural_dosimeter_in_South_America_Challenges_limitations_and_applications"
+                        target="_blank" class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Souza et al., 2021. Drainage network reorganization and aridification in “El Desierto de la Tatacoa” (Colombia) in the Late Pleistocene</h2>
-                    <p><strong>Goldschmidt, 2021</strong></p>
-                    <a href="https://conf.goldschmidt.info/goldschmidt/2021/meetingapp.cgi/Paper/6385" target="_blank">Link</a>
+                    <h2>Souza et al., 2021. Drainage network reorganization and aridification in “El Desierto de la
+                        Tatacoa” (Colombia) in the Late Pleistocene</h2>
+                    <p class="meta"><strong>Goldschmidt, 2021</strong></p>
+                    <a href="https://conf.goldschmidt.info/goldschmidt/2021/meetingapp.cgi/Paper/6385" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Souza et al., 2021. Using OSL dating data for quartz provenance analysis in late Quaternary sediments of Amazonia</h2>
-                    <p><strong>EGU General Assembly Conference, 2021</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2021EGUGA..23.8099S/abstract" target="_blank">Link</a>
+                    <h2>Souza et al., 2021. Using OSL dating data for quartz provenance analysis in late Quaternary
+                        sediments of Amazonia</h2>
+                    <p class="meta"><strong>EGU General Assembly Conference, 2021</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2021EGUGA..23.8099S/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Ureta et al., 2018. Unmanned Aerial Vehicle (UAV) photogrammetry application to morphometric analysis on monogenetic volcanoes a tool for generating low-cost high-resolution DEM in northern Chile</h2>
-                    <p><strong>XV Congreso Geológico Chileno, 2018</strong></p>
-                    <a href="https://repositorio.sernageomin.cl/handle/0104/25773" target="_blank">Link</a>
+                    <h2>Ureta et al., 2018. Unmanned Aerial Vehicle (UAV) photogrammetry application to morphometric
+                        analysis on monogenetic volcanoes a tool for generating low-cost high-resolution DEM in northern
+                        Chile</h2>
+                    <p class="meta"><strong>XV Congreso Geológico Chileno, 2018</strong></p>
+                    <a href="https://repositorio.sernageomin.cl/handle/0104/25773" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
                     <h2>González et al., 2017. Discovering the Complexity of Capable Faults in Northern Chile</h2>
-                    <p><strong>AGU Fall Meeting, 2017</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2017AGUFM.T31B0629G/abstract" target="_blank">Link</a>
+                    <p class="meta"><strong>AGU Fall Meeting, 2017</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2017AGUFM.T31B0629G/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al., 2017. Potassium feldspar post-IR IRSL dating of uplifted beach-ridges in Mejillones Peninsula, northern Chile</h2>
-                    <p><strong>15th International Conference on Luminescence and Electron Spin Resonance Dating, 2017</strong></p>
-                    <a href="https://repositorio.usp.br/directbitstream/b5b49e53-03b7-4fc7-a250-1b5461559996/3123147_compressed.pdf" target="_blank">Link</a>
+                    <h2>Del Rio et al., 2017. Potassium feldspar post-IR IRSL dating of uplifted beach-ridges in
+                        Mejillones Peninsula, northern Chile</h2>
+                    <p class="meta"><strong>15th International Conference on Luminescence and Electron Spin Resonance
+                            Dating, 2017</strong></p>
+                    <a href="https://repositorio.usp.br/directbitstream/b5b49e53-03b7-4fc7-a250-1b5461559996/3123147_compressed.pdf"
+                        target="_blank" class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al., 2016. Uplift rate of the Mejillones Peninsula (Northern Chile) constrained by luminescence dating of coastal and alluvial deposits</h2>
-                    <p><strong>AGU Fall Meeting, 2016</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2016AGUFMEP11B1011D/abstract" target="_blank">Link</a>
+                    <h2>Del Rio et al., 2016. Uplift rate of the Mejillones Peninsula (Northern Chile) constrained by
+                        luminescence dating of coastal and alluvial deposits</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2016</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2016AGUFMEP11B1011D/abstract" target="_blank"
+                        class="read-more">Link</a>
                 </article>
 
                 <article class="publication">
-                    <h2>González et al., 2015. The relationship between coastal uplift and normal faulting in the Mejillones Peninsula Northern Chile: the control of the subduction earthquake cycle</h2>
-                    <p><strong>AGU Fall Meeting, 2015</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2015AGUFM.T33C2943G/abstract" target="_blank">Link</a>
-                </article>    
-                
-                <article class="publication">
-                    <h2>Del Rio et al., 2015. Abandoned Beach Ridges in the Mejillones Peninsula, Northern Chile: Implications for Paleoseismology of Great Subduction Earthquakes</h2>
-                    <p><strong>AGU Fall Meeting, 2015</strong></p>
-                    <a href="https://ui.adsabs.harvard.edu/abs/2015AGUFM.T31A2850D/abstract" target="_blank">Link</a>
-                </article>  
+                    <h2>González et al., 2015. The relationship between coastal uplift and normal faulting in the
+                        Mejillones Peninsula Northern Chile: the control of the subduction earthquake cycle</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2015</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2015AGUFM.T33C2943G/abstract" target="_blank"
+                        class="read-more">Link</a>
+                </article>
 
                 <article class="publication">
-                    <h2>Del Rio et al., 2015. Estructura estratigráfica y origen de paleocostas de la Pampa de Mejillones en el norte de Chile</h2>
-                    <p><strong>XIV Congreso Geológico Chileno</strong></p>
-                    <a href="https://www.researchgate.net/publication/284730464_Estructura_estratigrafica_y_origen_de_paleocostas_de_la_Pampa_de_Mejillones_en_el_norte_de_Chile?_sg%5B0%5D=N-fHFZaccca01JmseTfMhTJOF_l-ByqSj3lFkiop6KDZjJG54kogHJ7nE-VPnc6wzSH-DBsENVx3YuYb2hUGvyCXI7mfIUY8SVMTMK7n.cK0At1gCgubxgTm1b2UfL6VDaoPlhOfJ9H11-AVAmfyFJJszhUCnIcTTcEHKtOmKTUGGAalXHaoOyeGj8Dd7mA&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6InByb2ZpbGUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19" target="_blank">Link</a>
-                </article>  
+                    <h2>Del Rio et al., 2015. Abandoned Beach Ridges in the Mejillones Peninsula, Northern Chile:
+                        Implications for Paleoseismology of Great Subduction Earthquakes</h2>
+                    <p class="meta"><strong>AGU Fall Meeting, 2015</strong></p>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2015AGUFM.T31A2850D/abstract" target="_blank"
+                        class="read-more">Link</a>
+                </article>
+
+                <article class="publication">
+                    <h2>Del Rio et al., 2015. Estructura estratigráfica y origen de paleocostas de la Pampa de
+                        Mejillones en el norte de Chile</h2>
+                    <p class="meta"><strong>XIV Congreso Geológico Chileno</strong></p>
+                    <a href="https://www.researchgate.net/publication/284730464_Estructura_estratigrafica_y_origen_de_paleocostas_de_la_Pampa_de_Mejillones_en_el_norte_de_Chile?_sg%5B0%5D=N-fHFZaccca01JmseTfMhTJOF_l-ByqSj3lFkiop6KDZjJG54kogHJ7nE-VPnc6wzSH-DBsENVx3YuYb2hUGvyCXI7mfIUY8SVMTMK7n.cK0At1gCgubxgTm1b2UfL6VDaoPlhOfJ9H11-AVAmfyFJJszhUCnIcTTcEHKtOmKTUGGAalXHaoOyeGj8Dd7mA&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6InByb2ZpbGUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19"
+                        target="_blank" class="read-more">Link</a>
+                </article>
 
             </section>
         </div>
     </div>
 
-    <!-- Archivo JavaScript -->
+    <!-- JavaScript -->
     <script src="javascript/pubs_ham.js"></script>
 
 </body>
+
 </html>

@@ -1,50 +1,38 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f9fc;
-}
+/* General styles are now handled by theme.css */
 
-/* Aplica la fuente Montserrat para los títulos */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Menú de hamburguesa */
-.hamburger-menu {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 15px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
-}
-
+/* Sidebar */
 .sidebar {
     height: 100%;
     width: 250px;
     position: fixed;
     top: 0;
     right: -250px;
-    background-color: #033b70;
+    background-color: var(--mclaren-darker);
+    border-left: 2px solid var(--mclaren-orange);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar a {
-    padding: 6px 12px 6px 12px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 25px;
-    color: white;
+    font-size: 20px;
+    color: var(--mclaren-light);
     display: block;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
 }
 
-.sidebar a:hover {
-    background-color: #ff7b00;
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: var(--mclaren-orange);
+    color: var(--mclaren-darker);
+    font-weight: bold;
 }
 
 .sidebar .closebtn {
@@ -52,107 +40,124 @@ h1, h2, h3 {
     top: 10px;
     right: 25px;
     font-size: 36px;
-    color: white;
+    border-bottom: none;
 }
 
-/* Cuando el menú está abierto, cambiar la posición */
-.sidebar.open {
-    right: 0; /* Mover el menú a la vista */
-}
-
-/* Contenedor principal */
-#main-content {
-    margin-right: 20px;
-    transition: margin-right 0.5s;
-    max-width: 1000px;
-    padding: 40px;
-    margin:0 auto;
-}
-
-/* Contenedor principal */
-#project-content {
-    margin-right: 20px;
-    transition: margin-right 0.5s;
-    max-width: 1000px;
-    padding: 40px;
-    margin:0 auto;
-}
-
-/* Estilos para publicaciones */
-.publications-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.publications-container header h1 {
-    font-size: 32px;
-    color: #033b70;
-    margin-bottom: 10px;
-}
-
-.publications-container header p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-/* Listado de publicaciones */
-.publications-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.publication {
-    padding: 20px;
-    background-color: #f7f9fc;
-    border-left: 5px solid #ff7b00;
+/* Hamburger Menu */
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    color: var(--mclaren-orange);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
-.publication h2 {
-    font-size: 20px;
-    color: #033b70;
-    margin-bottom: 5px;
+/* Main Content */
+#main-content {
+    margin-right: 0;
+    transition: margin-right 0.5s;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: 0 auto;
 }
 
-.publication p {
-    font-size: 16px;
-    color: #333;
+/* Publications Container */
+.publications-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--mclaren-grey);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    border-top: 4px solid var(--mclaren-orange);
+}
+
+.publications-container header h1 {
+    font-size: 36px;
+    color: var(--mclaren-light);
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.publication a {
+.publications-container header p {
+    font-size: 18px;
+    color: var(--mclaren-blue);
+    margin-bottom: 40px;
+}
+
+/* Publications List */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.publication {
+    padding: 25px;
+    background-color: var(--mclaren-darker);
+    border-left: 4px solid var(--mclaren-orange);
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.publication h2 {
+    font-size: 18px;
+    color: var(--mclaren-light);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.publication .meta {
     font-size: 14px;
-    color: #ff7b00;
+    color: var(--mclaren-orange);
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.publication .abstract {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.publication .read-more {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--mclaren-blue);
     text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--mclaren-blue);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.publication a:hover {
-    text-decoration: underline;
+.publication .read-more:hover {
+    background-color: var(--mclaren-blue);
+    color: var(--mclaren-darker);
 }
 
-
-
-/* Estilo responsive para publicaciones */
+/* Responsive */
 @media (max-width: 768px) {
     .publications-container {
-        padding: 15px;
-    }
-
-    .publications-list {
-        gap: 15px;
+        padding: 20px;
     }
 
     .publication h2 {
-        font-size: 18px;
-    }
-
-    .publication p {
-        font-size: 14px;
+        font-size: 16px;
     }
 }

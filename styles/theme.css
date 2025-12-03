@@ -1,0 +1,54 @@
+:root {
+    /* McLaren F1 Color Palette */
+    --mclaren-orange: #FF8000;
+    --mclaren-blue: #47C7FC;
+    --mclaren-dark: #1A1A1A; /* Anthracite */
+    --mclaren-darker: #121212; /* Darker background */
+    --mclaren-light: #F0F0F0; /* Off-white text */
+    --mclaren-grey: #333333; /* Dark grey for cards/sections */
+    
+    /* Fonts */
+    --font-main: 'Montserrat', sans-serif;
+    
+    /* Spacing */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+
+body {
+    background-color: var(--mclaren-dark);
+    color: var(--mclaren-light);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--mclaren-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--mclaren-orange);
+}
+
+/* Scrollbar styling for a tech feel */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--mclaren-darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mclaren-grey);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--mclaren-orange);
+}

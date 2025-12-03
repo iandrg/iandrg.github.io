@@ -1,61 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome - Ian del Rio</title>
+  <title>Ian del Rio - Data Scientist & Researcher</title>
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/theme.css">
   <link rel="stylesheet" href="styles/index_ham.css">
 </head>
 
 <body>
 
-  <!-- Menú de hamburguesa -->
+  <!-- Hamburger Menu -->
   <div class="hamburger-menu" onclick="toggleMenu()">
     &#9776;
   </div>
 
-  <!-- Menú lateral a la derecha -->
+  <!-- Sidebar Navigation -->
   <div id="sidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-    <a href="index.html">About</a>
-    <a href="cv.html">CV</a>
+    <a href="index.html" class="active">About</a>
+    <a href="cv.html">Resumé</a>
     <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
   </div>
 
-  <!-- Contenido principal -->
+  <!-- Main Content -->
   <div id="main-content">
     <div class="welcome-container">
+
+      <!-- Hero Section -->
       <header class="welcome-header">
-        <p>Hi! I'm <strong>Ian del Rio</strong>, geoscientist with 10+ years of experience in research, data analysis
-          and reporting</p>
+        <h1>Ian del Rio</h1>
+        <h2 class="subtitle">Data Scientist & Researcher</h2>
+        <p class="intro-text">
+          Geoscientist with 10+ years of experience transforming complex data into actionable insights.
+          Specializing in <strong>Data Analysis</strong>, <strong>Research</strong>, and <strong>Reporting</strong>.
+        </p>
       </header>
 
-      <!-- Imagen de bienvenida -->
+      <!-- Profile Image -->
       <div class="welcome-image">
         <img src="images/profile-image.jpeg" alt="Ian del Rio">
       </div>
 
-      <!-- Texto de introducción -->
+      <!-- Introduction -->
       <section class="welcome-text">
-        <p>In this page you'll be able to know more about me, my professional career, and my interests.</p>
-        <p>Check the different sections containing my resume and a list of publications and projects.</p>
-        <p>Thanks for the visit!</p>
+        <p>
+          Welcome. This platform showcases my professional journey, research contributions, and technical projects.
+          Explore my resume, publications, and the tools I use to solve real-world problems.
+        </p>
       </section>
 
-      <!-- Enlace a cv -->
+      <!-- Technical Skills Section -->
+      <section class="skills-section">
+        <h3>Technical Telemetry</h3>
+        <div class="skills-grid">
+          <div class="skill-card">Python</div>
+          <div class="skill-card">R</div>
+          <div class="skill-card">SQL</div>
+          <div class="skill-card">Machine Learning</div>
+          <div class="skill-card">GIS / Spatial Data</div>
+          <div class="skill-card">Data Visualization</div>
+          <div class="skill-card">ETL Pipelines</div>
+          <div class="skill-card">Reporting</div>
+        </div>
+      </section>
+
+      <!-- CTA -->
       <section class="welcome-cta">
-        <a href="cv.html" class="cta-button">Check out my resumé!</a>
+        <a href="cv.html" class="cta-button">View Full Resumé</a>
       </section>
-
 
     </div>
   </div>
 
-  <!-- Archivo JavaScript -->
+  <!-- JavaScript -->
   <script src="javascript/index_ham.js"></script>
 
 </body>

@@ -1,41 +1,38 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f9fc;
-}
+/* General styles are now handled by theme.css */
 
-/* Aplica la fuente Montserrat para los títulos */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Menú lateral a la derecha */
+/* Sidebar */
 .sidebar {
     height: 100%;
     width: 250px;
     position: fixed;
     top: 0;
     right: -250px;
-    background-color: #033b70;
+    background-color: var(--mclaren-darker);
+    border-left: 2px solid var(--mclaren-orange);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar a {
-    padding: 6px 12px 6px 12px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 25px;
-    color: white;
+    font-size: 20px;
+    color: var(--mclaren-light);
     display: block;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
 }
 
-.sidebar a:hover {
-    background-color: #ff7b00;
-    color: #ffffff;
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: var(--mclaren-orange);
+    color: var(--mclaren-darker);
+    font-weight: bold;
 }
 
 .sidebar .closebtn {
@@ -43,14 +40,10 @@ h1, h2, h3 {
     top: 10px;
     right: 25px;
     font-size: 36px;
+    border-bottom: none;
 }
 
-/* Cuando el menú está abierto, cambiar la posición */
-.sidebar.open {
-    right: 0; /* Mover el menú a la vista */
-}
-
-/* Botón de menú de hamburguesa */
+/* Hamburger Menu */
 .hamburger-menu {
     font-size: 30px;
     cursor: pointer;
@@ -58,42 +51,76 @@ h1, h2, h3 {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 1;
+    z-index: 999;
+    color: var(--mclaren-orange);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
-/* Contenido principal ajustado para el menú a la derecha */
+/* Main Content */
 #main-content {
-    margin-right: 20px;
+    margin-right: 0;
     transition: margin-right 0.5s;
     max-width: 1000px;
-    padding: 40px;
-    margin:0 auto;
+    padding: 40px 20px;
+    margin: 0 auto;
 }
 
 .cv-container {
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 40px;
+    background-color: var(--mclaren-grey);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    border-top: 4px solid var(--mclaren-orange);
 }
 
-/* Sección de contacto */
-.contact-info h2 {
-    font-size: 20px;
-    color: #033b70;
-    border-bottom: 2px solid #ff7b00;
+/* Headings */
+h2 {
+    font-size: 24px;
+    color: var(--mclaren-orange);
+    border-bottom: 2px solid var(--mclaren-blue);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--mclaren-blue);
+    margin: 0 0 5px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .contact-info p {
-    font-size: 14px;
-    color: #333;
-    margin: 5px 0;
+    margin: 0;
+    background: var(--mclaren-darker);
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #444;
 }
 
 .contact-info a {
-    color: #ff7b00;
+    color: var(--mclaren-orange);
     text-decoration: none;
 }
 
@@ -101,70 +128,106 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-/* Sección de experiencia y educación */
-.experience, .education {
+/* Experience & Education */
+.experience,
+.education {
+    margin-bottom: 40px;
+}
+
+.experience-item {
+    position: relative;
+    padding-left: 30px;
     margin-bottom: 30px;
+    border-left: 2px solid #444;
 }
 
-.experience h2, .education h2 {
-    font-size: 20px;
-    color: #033b70;
-    border-bottom: 2px solid #ff7b00;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+.timeline-marker {
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--mclaren-orange);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--mclaren-orange);
 }
 
-.experience-item, .education-item {
-    margin-bottom: 16px;
-}
-
-h3 {
-    font-size: 16px;
-    color: #033b70;
-    margin: 0 0 10px;
-}
-
-p {
+.company,
+.school {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 10px;
     font-size: 14px;
-    color: #333;
 }
 
-/* Sección de habilidades y idiomas */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+.degree {
+    margin-bottom: 20px;
+    background: var(--mclaren-darker);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid var(--mclaren-blue);
+}
+
+/* Skills & Languages */
 .skills-languages {
-    background-color: #033b70;
-    padding: 20px;
+    background-color: var(--mclaren-darker);
+    padding: 30px;
     border-radius: 8px;
     color: white;
     margin-top: 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
 }
 
 .two-columns {
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .column {
-    width: 45%;
+    flex: 1;
 }
 
-h2 {
-    color: #ff7b00;
+.skills-languages h2 {
+    color: var(--mclaren-light);
+    border-bottom-color: var(--mclaren-orange);
+    font-size: 20px;
 }
 
-li {
-    font-size: 14px;
-    margin-bottom: 10px;
+.skills-languages li {
+    background: #2a2a2a;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    list-style: none;
+    border-left: 3px solid var(--mclaren-orange);
 }
 
-/* Estilo responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .two-columns {
         flex-direction: column;
+        gap: 20px;
     }
 
-    .column {
-        width: 100%;
-        margin-bottom: 20px;
+    .cv-container {
+        padding: 20px;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        gap: 10px;
     }
 }
